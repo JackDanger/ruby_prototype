@@ -1,7 +1,6 @@
 History.txt
 Manifest.txt
-README.txt
+README.markdown
 Rakefile
-bin/ruby_prototype
 lib/ruby_prototype.rb
 test/test_ruby_prototype.rb
