@@ -1,13 +1,54 @@
-# -*- ruby -*-
-
 require 'rubygems'
-require 'hoe'
-require './lib/ruby_prototype.rb'
+require 'rake'
 
-Hoe.new('ruby_prototype', RubyPrototype::VERSION) do |p|
-  # p.rubyforge_name = 'ruby_prototypex' # if different than lowercase project name
-  p.developer('Jack Danger Canty', 'rubygems@6brand.com')
-  p.summary = "Provides Ruby1.9 with a method prototyping interface"
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "ruby_prototype"
+    gem.summary = %Q{Provides Ruby1.9 with a method prototyping interface}
+    gem.description = %Q{Allows the class-oriented Ruby language to double as a simple-object prototype language (a la Javascript)}
+    gem.email = "gems@6brand.com"
+    gem.homepage = "http://github.com/JackDanger/ruby_prototype"
+    gem.authors = ["Jack Danger Canty"]
+  end
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
 
-# vim: syntax=Ruby
+require 'rake/testtask'
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'lib' << 'test'
+  test.pattern = 'test/**/*_test.rb'
+  test.verbose = true
+end
+
+begin
+  require 'rcov/rcovtask'
+  Rcov::RcovTask.new do |test|
+    test.libs << 'test'
+    test.pattern = 'test/**/*_test.rb'
+    test.verbose = true
+  end
+rescue LoadError
+  task :rcov do
+    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
+  end
+end
+
+task :test => :check_dependencies
+
+task :default => :test
+
+require 'rake/rdoctask'
+Rake::RDocTask.new do |rdoc|
+  if File.exist?('VERSION')
+    version = File.read('VERSION')
+  else
+    version = ""
+  end
+
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title = "ruby_prototype #{version}"
+  rdoc.rdoc_files.include('README*')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
