@@ -1,5 +1,4 @@
 module RubyPrototype
-  VERSION = '1.0.0'
   def method_missing(method_name, *arguments, &block)
     return super unless method_name.to_s =~ /=$/ &&
                         ((1 == arguments.length) | block_given?)
