@@ -17,7 +17,7 @@ end
 
 require 'rake/testtask'
 task :test do
-  exec "ruby1.9 test/ruby_prototype_test.rb"
+  system "ruby1.9 test/ruby_prototype_test.rb"
 end
 
 task :default => :test
