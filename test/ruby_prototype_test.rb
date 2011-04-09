@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../lib/ruby_prototype'
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'ruby_prototype'))
 
 [ Object,
   Object.new,
