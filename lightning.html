@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>lightning.rb</title>
+	<style type="text/css">
+/* Stylesheet generated from TextMate theme
+ *
+ * Daniel Fischer
+ * 
+ *
+ */
+
+/* Mostly to improve view within the TextMate HTML viewer */
+body {
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+pre.textmate-source {
+	margin: 0 0 0 0.5em;
+	padding: 0 0 0 2px;
+	font-family: Inconsolata, monospace;
+	font-size: 26px;
+	line-height: 1.3em;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+pre.textmate-source.daniel_fischer {
+	color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0.93);
+}
+
+pre.textmate-source .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #888;
+	background-color: #eee;
+}
+pre.textmate-source.daniel_fischer span {
+   padding-top: 0.2em;
+   padding-bottom: 0.1em;
+}
+pre.textmate-source.daniel_fischer ::selection {
+	background-color: rgba(84, 78, 89, 0.88);
+}
+/* Text base */
+pre.textmate-source.daniel_fischer .text {
+	color: #FFFFFF;
+	background-color: rgba(9, 9, 9, 0.99);
+}
+
+/* Support Model */
+pre.textmate-source.daniel_fischer .support_type, pre.textmate-source.daniel_fischer .support_class {
+	color: #FF8000;
+}
+
+/* Inline Ruby Html */
+pre.textmate-source.daniel_fischer .source_ruby_rails_embedded_html {
+	background-color: rgba(0, 0, 0, 0.99);
+}
+
+/* Ruby Html */
+pre.textmate-source.daniel_fischer .text_html_ruby {
+	color: #FFFFFF;
+	background-color: rgba(16, 16, 16, 0.98);
+}
+
+/* Haml Ruby Souce */
+pre.textmate-source.daniel_fischer .source_ruby_embedded_haml {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+/* Haml */
+pre.textmate-source.daniel_fischer .text_haml {
+	background-color: rgba(9, 9, 9, 0.99);
+}
+
+/* Haml Tag */
+pre.textmate-source.daniel_fischer .meta_tag_haml, pre.textmate-source.daniel_fischer .entity_name_tag_haml {
+	color: #FFFF00;
+}
+
+/* Haml Classes */
+pre.textmate-source.daniel_fischer .entity_name_tag_class_haml, pre.textmate-source.daniel_fischer .entity_name_tag_id_haml {
+	color: #0065E5;
+}
+
+/* Ruby Number */
+pre.textmate-source.daniel_fischer .constant_numeric_ruby {
+	color: #CCFF33;
+	background-color: rgba(0, 0, 0, 0.00);
+}
+
+/* Ruby source */
+pre.textmate-source.daniel_fischer .source_ruby {
+	background-color: rgba(0, 0, 0, 0.92);
+}
+
+/* Source base */
+pre.textmate-source.daniel_fischer .source {
+	color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0.87);
+}
+
+/* Comment */
+pre.textmate-source.daniel_fischer .comment {
+	color: #BE40FF;
+}
+
+/* Constant */
+pre.textmate-source.daniel_fischer .constant {
+	color: #339999;
+}
+
+/* Keyword */
+pre.textmate-source.daniel_fischer .keyword {
+	color: #FF0000;
+}
+
+/* Pre-processor Line */
+pre.textmate-source.daniel_fischer .keyword_preprocessor {
+	color: #EDF8F9;
+}
+
+/* Pre-processor Directive */
+pre.textmate-source.daniel_fischer .keyword_preprocessor .directive {
+	color: #FFFFFF;
+}
+
+/* Function name */
+pre.textmate-source.daniel_fischer .entity_name_function, pre.textmate-source.daniel_fischer .storage_type_function_js {
+	color: #FFFF00;
+}
+
+/* Function argument */
+pre.textmate-source.daniel_fischer .variable_parameter {
+	font-style: italic;
+}
+
+/* Block comment */
+pre.textmate-source.daniel_fischer .source .comment_block {
+	color: #9337E5;
+	background-color: #070707;
+}
+
+/* Variable */
+pre.textmate-source.daniel_fischer .variable_other {
+	color: #1356FF;
+}
+
+/* ActiveRecord Function */
+pre.textmate-source.daniel_fischer .support_function_activerecord_rails {
+	color: #999966;
+}
+
+/* String */
+pre.textmate-source.daniel_fischer .string {
+	color: #66FF00;
+}
+
+/* String escapes */
+pre.textmate-source.daniel_fischer .string .constant_character_escape {
+	color: #AAAAAA;
+}
+
+/* String (executed) */
+pre.textmate-source.daniel_fischer .string_interpolated {
+	color: #000000;
+	background-color: #848522;
+}
+
+/* Regular expression */
+pre.textmate-source.daniel_fischer .string_regexp {
+	color: #44B4CC;
+}
+
+/* String (literal) */
+pre.textmate-source.daniel_fischer .string_literal {
+	color: #CCCC33;
+}
+
+/* String escapes (executed) */
+pre.textmate-source.daniel_fischer .string_interpolated .constant_character_escape {
+	color: #555555;
+}
+
+/* Class name */
+pre.textmate-source.daniel_fischer .entity_name_class, pre.textmate-source.daniel_fischer .support_class_js {
+	text-decoration: underline;
+}
+
+/* Class inheritance */
+pre.textmate-source.daniel_fischer .entity_other_inherited-class {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/* Tag name */
+pre.textmate-source.daniel_fischer .entity_name_tag {
+}
+
+/* Html Meta */
+pre.textmate-source.daniel_fischer .meta_tag_inline_any_html, pre.textmate-source.daniel_fischer . .meta_tag_block_any_html {
+	color: #FF6600;
+}
+
+/* Tag attribute */
+pre.textmate-source.daniel_fischer .entity_other_attribute-name {
+	color: #99CC99;
+	font-style: italic;
+}
+
+/* Other Keywords */
+pre.textmate-source.daniel_fischer .keyword_other {
+	color: #DDE93D;
+}
+
+/* CSS Selector */
+pre.textmate-source.daniel_fischer .meta_selector_css, pre.textmate-source.daniel_fischer .entity_other_attribute-name_pseudo-class_css, pre.textmate-source.daniel_fischer .entity_name_tag_wildcard_css, pre.textmate-source.daniel_fischer .entity_other_attribute-name_id_css, pre.textmate-source.daniel_fischer .entity_other_attribute-name_class_css {
+	color: #FF6600;
+}
+
+/* CSS Property */
+pre.textmate-source.daniel_fischer .support_type_property-name_css {
+	color: #999966;
+}
+
+/* CSS Other */
+pre.textmate-source.daniel_fischer .keyword_other_unit_css, pre.textmate-source.daniel_fischer .constant_other_rgb-value_css, pre.textmate-source.daniel_fischer .constant_numeric_css {
+	color: #FFFFFF;
+}
+
+/* Javascript Events */
+pre.textmate-source.daniel_fischer .support_function_event-handler_js {
+	color: #FFFFFF;
+}
+
+/* Javascript Operators */
+pre.textmate-source.daniel_fischer .keyword_operator_js {
+	color: #FFFFFF;
+}
+
+/* Javascript Keywords */
+pre.textmate-source.daniel_fischer .keyword_control_js {
+	color: #CCCC66;
+}
+
+/* Prototype Objects */
+pre.textmate-source.daniel_fischer .support_class_prototype_js {
+	color: #FFFFFF;
+}
+
+/* Prototype Methods */
+pre.textmate-source.daniel_fischer .object_property_function_prototype_js {
+	color: #FF6600;
+}
+
+/* Textile Markup heading */
+pre.textmate-source.daniel_fischer .markup_heading_textile {
+	color: #FFF639;
+}
+
+/* Textile Heading Type */
+pre.textmate-source.daniel_fischer .entity_name_type_textile {
+	color: #0091A2;
+}
+
+/* Textile markup list unnumbered */
+pre.textmate-source.daniel_fischer .markup_list_unnumbered_textile {
+	color: #E5FF50;
+}
+
+/* Textile markup list numbered */
+pre.textmate-source.daniel_fischer .markup_list_numbered_textile {
+	color: #FFA14C;
+}
+
+/* Textile Bold Text */
+pre.textmate-source.daniel_fischer .markup_bold_textile {
+	color: #FFB0A8;
+	background-color: rgba(0, 0, 0, 0.00);
+}
+
+/* Textile Italic Text */
+pre.textmate-source.daniel_fischer .markup_italic_textile {
+	font-style: italic;
+}
+
+/* Textile Tags */
+pre.textmate-source.daniel_fischer .entity_name_tag {
+	color: #EEFF36;
+}
+
+
+
+	</style>
+</head>
+
+<body><pre class="textmate-source daniel_fischer"><span class="source source_ruby source_ruby_rails source_ruby_rails_shoulda"><span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>ruby_prototype<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+
+<span class="variable variable_other variable_other_constant variable_other_constant_ruby">User</span> <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="support support_class support_class_ruby">Object</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span>
+<span class="support support_class support_class_ruby">User</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>name <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Samson<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>
+
+<span class="support support_class support_class_ruby">User</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>extends <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> proc <span class="keyword keyword_control keyword_control_start-block keyword_control_start-block_ruby">do </span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span><span class="variable variable_other variable_other_block variable_other_block_ruby">hash</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span>
+  hash<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>each <span class="keyword keyword_control keyword_control_start-block keyword_control_start-block_ruby">do </span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span><span class="variable variable_other variable_other_block variable_other_block_ruby">property</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">,</span> <span class="variable variable_other variable_other_block variable_other_block_ruby">value</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span>
+    send <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span><span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>property<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span>=<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> value
+  <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+
+<span class="support support_class support_class_ruby">User</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>extends <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>name</span> <span class="punctuation punctuation_separator punctuation_separator_key-value">=&gt;</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Delilah<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>
+
+puts <span class="support support_class support_class_ruby">User</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>name <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; 'Delilah'
+</span></span></pre>
+</body>
+</html>
