@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby_prototype}
-  s.version = "1.2.3"
+  s.version = "1.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jack Danger Canty"]
-  s.date = %q{2011-04-09}
+  s.date = %q{2011-04-10}
   s.description = %q{Allows the class-oriented Ruby language to double as a simple-object prototype language (a la Javascript)}
   s.email = %q{gems@6brand.com}
   s.extra_rdoc_files = [
@@ -26,13 +26,14 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/ruby_prototype.rb",
+    "lightning.html",
     "lightning.rb",
     "ruby_prototype.gemspec",
     "test/ruby_prototype_test.rb"
   ]
   s.homepage = %q{http://github.com/JackDanger/ruby_prototype}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
+  s.rubygems_version = %q{1.4.2}
   s.summary = %q{Provides Ruby1.9 with a method prototyping interface}
   s.test_files = [
     "test/ruby_prototype_test.rb"
