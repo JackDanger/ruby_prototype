@@ -8,8 +8,8 @@ module RubyPrototype
 
     # If arguments is a proc and not a block, the proc is our block.
     block = arguments[0] if arguments[0].is_a?(Proc) && !block_given?
-    # Otherwise, take the arguments and expand them into a list.
-    # Q: Why do we do this? Are they then evaluated individually?
+    # Otherwise, create a proc out of arguments[0], which is the code we passed in.
+    # This is so that all future arguments to our proc are passed properly to our proc].
     block ||= proc {|*a| arguments[0] }
 
     # Define the missing method on the target class.
